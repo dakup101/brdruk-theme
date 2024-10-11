@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src/ts"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

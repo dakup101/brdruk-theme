@@ -1,0 +1,39 @@
+/* Remove default Gutenberg margins from headings in the editor */
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Additional specificity to override user agent stylesheet */
+body .editor-styles-wrapper h1,
+body .editor-styles-wrapper h2,
+body .editor-styles-wrapper h3,
+body .editor-styles-wrapper h4,
+body .editor-styles-wrapper h5,
+body .editor-styles-wrapper h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Even more specificity */
+body .editor-styles-wrapper .editor-post-title__block h1,
+body .editor-styles-wrapper .editor-post-title__block h2,
+body .editor-styles-wrapper .editor-post-title__block h3,
+body .editor-styles-wrapper .editor-post-title__block h4,
+body .editor-styles-wrapper .editor-post-title__block h5,
+body .editor-styles-wrapper .editor-post-title__block h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+html :where(.wp-block) {
+  margin-bottom: 28px;
+  margin-top: 28px;
+  max-width: 100%;
+  font-size: 16px;
+}

@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* RedHatDisplay Font Family */
+
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url('../../../dist/fonts/RedHatDisplay.ttf') format('truetype');
+}
+
+/* Lexend Font Family */
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('../../../dist/fonts/Lexend-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* Basic Typography for Text Content */
+
+body {
+  @apply font-sans;
+  letter-spacing: 0.6px
+}
+
+.font-title{
+  @apply font-bold;
+  letter-spacing: 0.2px
+}
+
+.text-content {
+  @apply -mb-5;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-7;
+  }
+  h2 {
+    @apply text-4xl;
+    & > strong {
+      @apply font-semibold;
+    }
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  h5,
+  h6 {
+    @apply text-xl;
+  }
+
+  p {
+    line-height: 1.5em;
+  }
+
+  p,
+  ul,
+  ol {
+    @apply mb-5;
+  }
+
+  ul,
+  ol {
+    @apply pl-10;
+  }
+
+  ul {
+    @apply pl-6 list-disc;
+    li {
+      @apply pl-1.5 mb-1.5;
+    }
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  a {
+    @apply underline  underline-offset-4 transition-all;
+    &:hover {
+      @apply underline;
+    }
+  }
+
+  strong,
+  b {
+    @apply font-bold;
+  }
+}

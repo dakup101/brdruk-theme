@@ -1,0 +1,46 @@
+.form {
+  &--input {
+    @apply relative border-b border-dark;
+
+    &__label {
+      @apply absolute top-1/2 left-0 -translate-y-1/2 text-lg transition-all pointer-events-none;
+    }
+
+    &__input,
+    &__textarea {
+      @apply pt-8 pb-4 text-lg border-dark rounded-lg w-full outline-0 outline-none;
+
+      &:focus + label,
+      &.has-content + label {
+        @apply top-4 text-sm left-0 opacity-60;
+      }
+    }
+
+    &__textarea {
+      @apply md:pb-0;
+    }
+  }
+
+  &--end {
+    @apply flex flex-col sm:flex-row items-start justify-between mt-5;
+    input[type='submit'] {
+      @apply mt-10 sm:mt-0 sm:ml-3;
+    }
+
+    .wpcf7-spinner {
+      @apply hidden;
+    }
+
+    .wpcf7-list-item {
+      @apply m-0;
+    }
+  }
+}
+
+.wpcf7-form.submitting {
+  @apply opacity-50 bg-dark/10;
+}
+
+.wpcf7-not-valid-tip {
+  @apply absolute bottom-0 left-0;
+}

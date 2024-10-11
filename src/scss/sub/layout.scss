@@ -1,0 +1,18 @@
+.container {
+  @screen xl {
+    max-width: 1440px;
+  }
+}
+
+html {
+  @apply text-dark scroll-smooth;
+  font-size: 14px;
+
+  @screen 2xl {
+    font-size: 16px;
+  }
+}
+
+section {
+  @apply mb-20;
+}
