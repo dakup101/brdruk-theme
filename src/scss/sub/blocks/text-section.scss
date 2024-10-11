@@ -1,0 +1,21 @@
+.text-section {
+    &__title {
+        @apply relative text-3xl mb-10;
+
+        &::before {
+            content: '';
+            @apply absolute w-6 h-6 -top-2 bg-cover bg-no-repeat rounded-br-md overflow-hidden;
+            right: calc(100% + 1rem);
+            background-image: url('/wp-content/themes/brdruk-theme/dist/img/btn-triangle-bot-dark.svg');
+        }
+    }
+
+    &__content {
+        @apply mb-5;
+    }
+
+    &--gray{
+        @apply py-20;
+        background: #f2f2f2;
+    }
+}

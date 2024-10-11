@@ -1,5 +1,5 @@
 .banner-hero {
-    @apply relative py-12 pb-20;
+    @apply relative py-12 pb-20 overflow-hidden;
 
     &__inner {
         @apply relative z-20;
