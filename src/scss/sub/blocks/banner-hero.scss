@@ -1,3 +1,40 @@
 .banner-hero {
+    @apply relative py-12 pb-20;
+
+    &__inner {
+        @apply relative z-20;
+    }
+
+    &__bg {
+        @apply absolute top-0 left-0 object-cover object-top w-full h-full;
+    }
     
+    &::after {
+        content: '';
+        @apply w-full h-full bg-dark/40 top-0 left-0 absolute z-10;
+    }
+
+    &__title {
+        @apply text-5xl mb-10 text-center text-white max-w-4xl mx-auto;
+    }
+
+    &__content {
+        @apply text-xl text-center mb-10 text-white max-w-3xl mx-auto;
+    }
+
+    &__decoration {
+        @apply w-56 h-56 relative mx-auto mb-10;
+        & > img {
+            @apply absolute top-0 left-0 w-full h-full;
+
+            & + img {
+                @apply animate-spin;
+                animation-duration: 11s;
+            }
+        }
+    }
+
+    &__buttons {
+        @apply flex gap-10 items-center justify-center;
+    }
 }

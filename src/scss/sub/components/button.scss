@@ -1,3 +1,64 @@
 .btn {
+    @apply relative px-8 py-4 w-fit block text-center border-2 rounded-md font-semibold text-sm overflow-hidden transition-all duration-200 shadow-md shadow-dark/20;
 
+    &::after, &::before {
+        content: '';
+        @apply w-5 h-auto aspect-square absolute bg-no-repeat bg-cover transition-all duration-300;
+    }
+
+    &::before {
+        @apply top-0 left-0 ;
+        background-position: top;
+    }
+
+    &::after {
+        @apply bottom-0 right-0;
+        background-position: bottom;
+    }
+
+    &--dark {
+        @apply border-dark text-white bg-dark;
+
+        &::after, &::before {
+            @apply w-5 h-auto aspect-square absolute bg-no-repeat bg-cover transition-all duration-300;
+        }
+
+        &::before {
+            background-image: url('/wp-content/themes/brdruk-theme/dist/img/btn-triangle-top-light.svg');
+        }
+
+        &::after {
+            background-image: url('/wp-content/themes/brdruk-theme/dist/img/btn-triangle-bot-light.svg');
+        }
+
+        &:hover { 
+            @apply text-dark shadow-lg shadow-dark/20;
+        }
+    }
+
+    &--light {
+        @apply border-white text-dark bg-white;
+
+        &::before {
+            background-image: url('/wp-content/themes/brdruk-theme/dist/img/btn-triangle-top-dark.svg');
+        }
+
+        &::after {
+            background-image: url('/wp-content/themes/brdruk-theme/dist/img/btn-triangle-bot-dark.svg');
+        }
+
+        &:hover { 
+            @apply text-white shadow-xl shadow-dark/20;
+        }
+    }
+
+    & > span {
+        @apply relative z-10;
+    }
+
+    &:hover {
+        &::after, &::before {
+            @apply w-full h-full;
+        }
+    }
 }
