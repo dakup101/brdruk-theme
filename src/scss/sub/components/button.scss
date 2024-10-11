@@ -3,7 +3,7 @@
 
     &::after, &::before {
         content: '';
-        @apply w-5 h-auto aspect-square absolute bg-no-repeat bg-cover transition-all duration-300;
+        @apply w-5 h-auto aspect-square absolute bg-no-repeat bg-cover transition-all ease-linear duration-300;
     }
 
     &::before {

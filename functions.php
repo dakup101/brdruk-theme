@@ -32,6 +32,7 @@ if (class_exists('ACF')) {
     // ACF Fields - Blocks
     require_once(FIELD . "block-banner-hero.php");
     require_once(FIELD . "block-text-section.php");
+    require_once(FIELD . "block-contact-section.php");
 }
 
 // Ajax

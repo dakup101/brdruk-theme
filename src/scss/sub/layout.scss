@@ -2,13 +2,17 @@
   @screen xl {
     max-width: 1440px;
   }
+
+  @screen lg {
+    max-width: 1240px;
+  }
 }
 
 html {
   @apply text-dark scroll-smooth;
   font-size: 14px;
 
-  @screen 2xl {
+  @screen lg {
     font-size: 16px;
   }
 }

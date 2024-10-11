@@ -84,6 +84,7 @@ function misha_allowed_block_types($allowed_blocks, $editor_context) {
     return array(
         'acf/banner-hero',
         'acf/text-section',
+        'acf/contact-section',
     );
 }
 add_filter('allowed_block_types_all', 'misha_allowed_block_types', 25, 2);

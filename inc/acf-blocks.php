@@ -5,6 +5,7 @@ function register_acf_blocks() {
 
     wp_register_block("banner-hero", "Banner Hero", "banner-hero.php");
     wp_register_block("text-section", "Text Section", "text-section.php");
+    wp_register_block("contact-section", "Contact Section", "contact-section.php");
 
     wp_register_style('all-block-styles', THEME_URI . '/dist/css/theme.css', null);
     register_block_style('core/heading', [

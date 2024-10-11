@@ -34,7 +34,13 @@
     .wpcf7-list-item {
       @apply m-0;
     }
+
+      & .btn {
+    flex-shrink: 0;
   }
+  }
+
+
 }
 
 .wpcf7-form.submitting {
