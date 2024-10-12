@@ -1,5 +1,9 @@
 .btn {
-    @apply relative px-8 py-4 w-fit block text-center border-2 rounded-md font-semibold text-sm overflow-hidden transition-all duration-200 shadow-md shadow-dark/20;
+    @apply relative px-8 py-4 w-full max-w-xs block text-center border-2 rounded-md font-semibold text-sm overflow-hidden transition-all duration-200 shadow-md shadow-dark/20;
+
+    @screen lg {
+        @apply w-fit;
+    }
 
     &::after, &::before {
         content: '';

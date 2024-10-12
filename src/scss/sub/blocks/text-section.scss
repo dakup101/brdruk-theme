@@ -1,12 +1,20 @@
 .text-section {
     &__title {
-        @apply relative text-3xl mb-10;
+        @apply relative text-3xl mb-10 pl-6;
+
+        @screen lg {
+            @apply pl-0;
+        }
 
         &::before {
             content: '';
-            @apply absolute w-6 h-6 -top-2 bg-cover bg-no-repeat rounded-br-md overflow-hidden;
-            right: calc(100% + 1rem);
+            @apply absolute w-4 h-4 opacity-40 top-0 left-0 bg-cover bg-no-repeat rounded-br-md overflow-hidden;
             background-image: url('/wp-content/themes/brdruk-theme/dist/img/btn-triangle-bot-dark.svg');
+
+            @screen lg {
+                @apply w-5 h-5 -top-1.5 left-auto;
+                right: calc(100% + 0.5rem);
+            }
         }
     }
 

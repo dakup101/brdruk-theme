@@ -21,10 +21,15 @@
     }
   }
 
+  &--checkbox {
+    @apply w-full;
+  }
+
   &--end {
-    @apply flex flex-col sm:flex-row items-start justify-between mt-5;
-    input[type='submit'] {
-      @apply mt-10 sm:mt-0 sm:ml-3;
+    @apply flex flex-col sm:flex-row items-center mt-5;
+
+    @screen lg {
+      @apply flex-row justify-between items-start;
     }
 
     .wpcf7-spinner {
@@ -36,8 +41,13 @@
     }
 
       & .btn {
-    flex-shrink: 0;
-  }
+        @apply mt-10;
+        flex-shrink: 0;
+
+        @screen lg {
+          @apply ml-10 mt-0;
+        }
+      }
   }
 
 

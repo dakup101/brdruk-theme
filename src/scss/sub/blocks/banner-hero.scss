@@ -15,15 +15,21 @@
     }
 
     &__title {
-        @apply text-5xl mb-10 text-center text-white max-w-4xl mx-auto;
+        @apply text-4xl mb-10 text-center text-white max-w-4xl mx-auto;
+
+        @screen lg {
+            @apply text-5xl;
+        }
     }
 
     &__content {
         @apply text-xl text-center mb-10 text-white max-w-3xl mx-auto;
+
+
     }
 
     &__decoration {
-        @apply w-56 h-56 relative mx-auto mb-10;
+        @apply w-36 h-36 relative mx-auto mb-10;
         & > img {
             @apply absolute top-0 left-0 w-full h-full;
 
@@ -32,9 +38,25 @@
                 animation-duration: 11s;
             }
         }
+
+        @screen lg {
+            @apply w-56 h-56;
+        }
     }
 
     &__buttons {
-        @apply flex gap-10 items-center justify-center;
+        @apply flex flex-col gap-10 items-center justify-center;
+
+        & .btn {
+            @apply w-full max-w-xs;
+
+            @screen lg {
+                @apply w-fit;
+            }
+        }
+
+        @screen lg {
+            @apply flex-row;
+        }
     }
 }
